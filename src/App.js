@@ -90,7 +90,12 @@ function App() {
         </div>
         <div className="current-operand">{currentOperand}</div>
       </div>
-      <button className="span-two" onClick={() => dispatch({type: ACTIONS.CLEAR})}>AC</button>
+      <button
+        className="span-two"
+        onClick={() => dispatch({ type: ACTIONS.CLEAR })}
+      >
+        AC
+      </button>
       <button>DEL</button>
       <OperationButton operation="÷" dispatch={dispatch} />
       <DigitButton digit="1" dispatch={dispatch} />
@@ -107,7 +112,12 @@ function App() {
       <OperationButton operation="-" dispatch={dispatch} />
       <DigitButton digit="." dispatch={dispatch} />
       <DigitButton digit="0" dispatch={dispatch} />
-      <button className="span-two">=</button>
+      <button
+        className="span-two"
+        onClick={() => dispatch({ type: ACTIONS.EVALUATE })}
+      >
+        =
+      </button>
     </div>
   );
 }
